@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/dist/css/grapes.min.css">
+    <script src="/dist/js/grapes.min.js"></script>
+    <link href='/dist/css/bootstrap/bootstrap.min.css' rel='stylesheet' />
+    <script src='/dist/js/popper.min.js'></script>
+    <script src='/dist/js/bootstrap.min.js'></script>
+    <script src="https://unpkg.com/grapesjs-blocks-basic@1.0.1"></script>
+
+   <link rel="stylesheet" href="/dist/css/main.css">
+  </head>
+
+  <body>
+    <div id='navbar' class='sidenav d-flex flex-row overflow-scroll'>
+        <nav class='navbar navbar-light'>
+          <div class='container-fluid'>
+            <span class='navbar-brand mb-0 h3 logo'>BIT BUILDER</span>
+          </div>
+        </nav>
+        <div class='my-2 d-flex flex-row'>
+          <button
+            type='button'
+            class='btn btn-outline-secondary btn-sm mb-2 mx-2'
+            data-bs-toggle='modal'
+            data-bs-target='#addPageModal'>
+            <i class='fa fa-plus'></i>
+            Add Page
+          </button>
+          <ul class='list-group list-group-horizontal pages'>
+            <li class='list-group-item d-flex justify-content-between align-items-center'>
+              Home
+              <div class='m-2'>
+                <button class='btn btn-sm btn-outline-primary'>
+                  <i class='fa fa-pencil'></i>
+                </button>
+                <button class='btn btn-sm btn-outline-danger'>
+                  <i class='fa fa-trash'></i>
+                </button>
+              </div>
+            </li>
+            <li class='list-group-item d-flex justify-content-between align-items-center'>
+              About
+              <div class='m-2'>
+                <button class='btn btn-sm btn-outline-primary'>
+                  <i class='fa fa-pencil'></i>
+                </button>
+                <button class='btn btn-sm btn-outline-danger'>
+                  <i class='fa fa-trash'></i>
+                </button>
+              </div>
+            </li>
+            <li class='list-group-item d-flex justify-content-between align-items-center'>
+              Contact Us
+              <div class='m-2'>
+                <button class='btn btn-sm btn-outline-primary'>
+                  <i class='fa fa-pencil'></i>
+                </button>
+                <button class='btn btn-sm btn-outline-danger'>
+                  <i class='fa fa-trash'></i>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class='main-content'>
+        <nav class='navbar navbar-light'>
+          <div class='container-fluid'>
+            <div class='panel__devices'></div>
+            <div class='panel__basic-actions'></div>
+          </div>
+        </nav>
+        <div id='gjs'></div>
+        <div
+          class='modal fade'
+          id='addPageModal'
+          tabindex='-1'
+          aria-labelledby='addPageModalLabel'
+          aria-hidden='true'
+          data-bs-backdrop='static'
+          data-bs-keyboard='false'
+        >
+          <div class='modal-dialog'>
+            <div class='modal-content'>
+              <form id='create-page' onsubmit='return validateForm(event)' novalidate>
+                <div class='modal-header'>
+                  <h5 class='modal-title' id='addPageModalLabel'>Create Page</h5>
+                  <button
+                    type='button'
+                    class='btn-close'
+                    data-bs-dismiss='modal'
+                    aria-label='Close'
+                  ></button>
+                </div>
+                <div class='modal-body'>
+                  <div class='col-auto'>
+                    <label for='name' class='form-label'>Name</label>
+                    <input
+                      type='text'
+                      class='form-control form-control-sm'
+                      id='name'
+                      name='name'
+                      placeholder='Name of Page'
+                      required
+                    />
+                    <div class='invalid-feedback'>
+                      Please provide a valid name.
+                    </div>
+                  </div>
+                </div>
+                <div class='modal-footer'>
+                  <button
+                    type='button'
+                    class='btn btn-secondary btn-sm'
+                    data-bs-dismiss='modal'
+                    onclick='clearForm()'
+                  >
+                    Close
+                  </button>
+                  <button type='submit' class='btn btn-primary btn-sm'>
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script type="text/javascript" src="/dist/main.js"></script>
+    <script type="text/javascript" src="/dist/custom.js"></script>
+  </body>
+</html>

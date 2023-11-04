@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: 0.5s;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  .logo {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .pages {
+    height: 100px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+}
+
+.main-content {
+  position: relative;
+  width: 85%;
+  left: 15%;
+
+}
+
+.error .bg-body {
+  min-height: 150px;
+  max-height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.error  .title {
+  font-weight: 600;
+}
+
+.error .btn {
+  border-radius: 40px !important;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 150px;
+}
+/*# sourceMappingURL=main.css.map */
